@@ -1,0 +1,11 @@
+# Dockerfile for Generic AARCH64 (ARMv8)
+
+FROM wlisac/generic-aarch64-swift:5.0
+
+WORKDIR /package
+
+COPY . ./
+
+RUN swift build
+
+CMD ["./.build/debug/Hello"]

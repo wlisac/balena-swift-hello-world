@@ -1,0 +1,11 @@
+# Dockerfile for Generic ARMv7-a HF
+
+FROM wlisac/generic-armv7ahf-swift:5.0
+
+WORKDIR /package
+
+COPY . ./
+
+RUN swift build
+
+CMD ["./.build/debug/Hello"]

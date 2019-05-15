@@ -1,0 +1,11 @@
+# Raspberry Pi 3 (using 64 bit OS)
+
+FROM wlisac/raspberrypi3-64-swift:5.0
+
+WORKDIR /package
+
+COPY . ./
+
+RUN swift build
+
+CMD ["./.build/debug/Hello"]

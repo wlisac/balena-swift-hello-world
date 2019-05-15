@@ -1,0 +1,11 @@
+# Dockerfile for Raspberry Pi (v1 or Zero)
+
+FROM wlisac/raspberry-pi-swift:5.0
+
+WORKDIR /package
+
+COPY . ./
+
+RUN swift build
+
+CMD ["./.build/debug/Hello"]
