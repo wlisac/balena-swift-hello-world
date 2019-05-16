@@ -2,7 +2,7 @@
 
 FROM wlisac/raspberry-pi2-swift:5.0
 
-WORKDIR /package
+WORKDIR /app
 
 COPY . ./
 

@@ -1,10 +1,17 @@
 # Swift on Balena – Hello, world! 👋 
 
+<p>
+    <img src="https://img.shields.io/badge/Swift-5.0-orange.svg" />
+    <img src="https://img.shields.io/badge/architectures-ARMv6 | ARMv7 | ARMv8-lightgray.svg" />
+    <a href="https://twitter.com/wlisac"><img src="https://img.shields.io/badge/twitter-@wlisac-blue.svg" /></a>
+    <a href="https://launchpass.com/swift-arm"><img src="https://img.shields.io/badge/slack-swift--arm-purple.svg" /></a>
+</p>
+
 This is a sample project that shows how to run [Swift](http://swift.org) on Raspberry Pi and other ARM devices using Docker images from [Swift on Balena](https://github.com/wlisac/swift-on-balena).
 
 ## Getting Started
 
-You can build and run this sample Swift app in a Docker container by using [Docker](https://www.docker.com) or by using [BalenaCloud](https://www.balena.io).
+You can build and run this sample [Swift Package Manager](https://github.com/apple/swift-package-manager) app in a Docker container by using [Docker](https://www.docker.com) or by using [BalenaCloud](https://www.balena.io).
 
 ### Using Docker
 
@@ -28,13 +35,13 @@ Build and tag a new Docker image using [`docker build`](https://docs.docker.com/
 > Note: Depending on your device type, you may need to use a different `Dockerfile`. The command below is using `Dockerfile.raspberrypi3` for Raspberry Pi 3 devices. `Dockerfile`s for other devices are included in this example project.
 
 ```bash
-$ docker build --tag balena-swift-hello-world --file Dockerfile.raspberrypi3 .
+$ docker build -t balena-swift-hello-world -f Dockerfile.raspberrypi3 .
 ```
 
 Now you can run the newly built Docker image using [`docker run`](https://docs.docker.com/engine/reference/commandline/run/).
 
 ```bash
-$ docker run --tty --rm balena-swift-hello-world
+$ docker run -it --rm balena-swift-hello-world
 ```
 
 That's it! You just built and ran a Swift app in a Docker container on ARM! You should see the output below in your terminal.
@@ -82,15 +89,16 @@ Congrats! You now have a Swift app running in a Docker container on a Raspberry 
 
 ## Next Steps
 
-#### Swift, Docker, and Balena
+### Swift, Docker, and Balena
 - Learn more about [Swift on Balena](https://github.com/wlisac/swift-on-balena) Docker images.
 - Take a deeper dive into creating a [Dockerfile for balena](https://www.balena.io/docs/learn/develop/dockerfile/).
 - Check out [balena's local mode](https://www.balena.io/docs/learn/develop/local-mode/) for a rapid local development workflow.
 
-#### Community Projects
+### Community Projects
 There is so much you can do with Swift on ARM. Try out some of these community projects to see what's possible.
 
 - Use Swift to control sensors with [SwiftyGPIO](https://github.com/uraimo/SwiftyGPIO) and [SwiftyLinkerKit](https://github.com/SwiftyLinkerKit/SwiftyLinkerKit).
 - Use Swift to communicate over Bluetooth with [BluetoothLinux](https://github.com/PureSwift/BluetoothLinux).
 - Send messages over MQTT using [Perfect-Mosquitto](https://github.com/PerfectlySoft/Perfect-Mosquitto)
 
+Join the Swift on ARM community in the [swift-arm](https://launchpass.com/swift-arm) Slack channel.

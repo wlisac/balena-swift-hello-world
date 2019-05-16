@@ -2,7 +2,7 @@
 
 FROM wlisac/generic-aarch64-swift:5.0
 
-WORKDIR /package
+WORKDIR /app
 
 COPY . ./
 
