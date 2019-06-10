@@ -1,0 +1,11 @@
+# Dockerfile for balenaFin 1.0 & 1.1
+
+FROM wlisac/generic-armv7ahf-swift:5.0
+
+WORKDIR /app
+
+COPY . ./
+
+RUN swift build
+
+CMD ["./.build/debug/Hello"]
