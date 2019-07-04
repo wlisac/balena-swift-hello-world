@@ -1,7 +1,7 @@
 # Swift on Balena – Hello, world! 👋 
 
 <p>
-    <img src="https://img.shields.io/badge/Swift-5.0-orange.svg" />
+    <img src="https://img.shields.io/badge/Swift-5.0.1-orange.svg" />
     <img src="https://img.shields.io/badge/architectures-ARMv6 | ARMv7 | ARMv8-lightgray.svg" />
     <a href="https://twitter.com/wlisac"><img src="https://img.shields.io/badge/twitter-@wlisac-blue.svg" /></a>
     <a href="https://launchpass.com/swift-arm"><img src="https://img.shields.io/badge/slack-swift--arm-purple.svg" /></a>
