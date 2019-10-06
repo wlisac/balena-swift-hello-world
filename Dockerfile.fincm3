@@ -1,7 +1,7 @@
 # Dockerfile for balenaFin 1.0 & 1.1
 
 # The build container for building the Swift app from source
-FROM wlisac/generic-armv7ahf-swift:5.0.1-build AS build
+FROM wlisac/generic-armv7ahf-swift:5.1-build AS build
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY . ./
 RUN swift build --jobs 1
 
 # The run container that will go to devices
-FROM wlisac/generic-armv7ahf-swift:5.0.1-run
+FROM wlisac/generic-armv7ahf-swift:5.1-run
 
 WORKDIR /app
 
