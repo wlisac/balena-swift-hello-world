@@ -1,7 +1,7 @@
-# Dockerfile for Generic AARCH64 (ARMv8)
+# Raspberry Pi Zero 2 W (64-bit OS)
 
 # The build container for building the Swift app from source
-FROM wlisac/generic-aarch64-swift:5.5.1-build AS build
+FROM wlisac/raspberrypi0-2w-64-swift:5.5.1-build AS build
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY . ./
 RUN swift build --jobs 1
 
 # The run container that will go to devices
-FROM wlisac/generic-aarch64-swift:5.5.1-run
+FROM wlisac/raspberrypi0-2w-64-swift:5.5.1-run
 
 WORKDIR /app
 
