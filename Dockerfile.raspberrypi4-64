@@ -1,7 +1,7 @@
-# Raspberry Pi 4 (using 64 bit OS)
+# Raspberry Pi 4 (64-bit OS)
 
 # The build container for building the Swift app from source
-FROM wlisac/raspberrypi4-64-swift:5.1-build AS build
+FROM wlisac/raspberrypi4-64-swift:5.5.1-build AS build
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY . ./
 RUN swift build --jobs 1
 
 # The run container that will go to devices
-FROM wlisac/raspberrypi4-64-swift:5.1-run
+FROM wlisac/raspberrypi4-64-swift:5.5.1-run
 
 WORKDIR /app
 
